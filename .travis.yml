@@ -1,10 +1,10 @@
 language: java
-
 deploy:
   provider: releases
-  api_key: "${GITHUB_KEY}"
+  api_key:
+    secure: oFhtdJdOrlULluXw+FZFWZBYouJ6ubI4L3TR6+98ok3+oe3SYArkbQAqA1WB5bK0sQwc/tlHDikCKUbw83hsYt3CR0HkpP8kGEaRpcdNGtgTDQmGuPii7Ygt7BOky51ySn+lrlQ9Y2YBSsHJrJ8WFm0EmjVMHNiGCN9X/4SQXkEWkd821gjH5CeGZvF/gE2vzSlWwD8X9Zxk8bjz4+fZDxba9GDesP+tWu2l1yHo4fjnug3mvg49hGunPMfD1rpzHyjfZYcgMQFRnnjxkhMLG3GPZJYrLPH32OkcxqNesxdpFyU1TodG9RkehCsViqtp+J/K4YxYcSXcUe+7xasNv5/R0CqrEl2oaPd9+aJMK1+r8aMILE3w1ZNMe5GMCLk8J1FAOMgnzWOsCCxwzv1tLhfdcvmiebefcHYwqT5Bi3QoGwKPeiOLiVxBjUQDUqDnoXFc2UeE5OTzVPs5SqGPdDp0FFVfYeGOdrAepg4e0ckXxRLEP8M7x86qJ/sDhqpINj3tdhLK10KRWfBZSJnNLy0KvAGsrTeVys+GRu3h4Zea5bcAeWXUV7f1DHiRmHGwOxcj7GNnmxcevJST2XkjrfdJgnsH981WJxzEDP9vhouuwucQIN4wjXSb6IxS/3L2d2QHqOMkoUDZiigZu8gQyjtcb4qHtx/QQIT57Xn4Jrs=
   file: "*/target/*.jar"
   file_glob: true
   skip_cleanup: true
   on:
-    tags: true
+    repo: lindsay-stevens/collect_settings
