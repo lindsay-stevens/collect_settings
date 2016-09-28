@@ -21,16 +21,18 @@ public class Main {
     }
 
     Main(String[] args) {
+        String lenError = "Only one argument accepted: path to a properties file.";
+        String pathError = "Provided argument is not a path to a file that exists.";
 
         if (args.length != 1) {
-            throw new IllegalArgumentException("Need only one string arg");
+            throw new IllegalArgumentException(lenError);
         }
         File f = new File(args[0]);
         if (f.exists() && !f.isDirectory()){
             this.settingsPath = args[0];
         }
         else {
-            throw new IllegalArgumentException("Path not a valid file");
+            throw new IllegalArgumentException(pathError);
         }
         this.userProperties = getProps("user");
         this.adminProperties = getProps("admin");
