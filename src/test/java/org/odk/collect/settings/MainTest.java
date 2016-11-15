@@ -14,7 +14,7 @@ public class MainTest {
 
     private Main main;
     private String anAdminKey = "change_language";
-    private String aUserKey = "firstRun";
+    private String aUserKey = "default_completed";
 
     @Before
     public void setUp() throws Exception {
